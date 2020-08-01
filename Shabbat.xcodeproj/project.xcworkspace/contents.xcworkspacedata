@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Shabbat Pro.xcodeproj">
+      location = "self:/Users/idanmoshe/Projects/Shabbat Pro/Shabbat.xcodeproj">
    </FileRef>
 </Workspace>
