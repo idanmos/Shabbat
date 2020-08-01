@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MZj-bL-I3t">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ap1-ZW-ulM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MZj-bL-I3t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L0F-VP-cAW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9if-YA-T2u" kind="relationship" relationship="rootViewController" id="7p0-Hh-Dyu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dD-aL-OsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="116"/>
+        </scene>
+        <!--זמני כניסת שבת וחג-->
+        <scene sceneID="yUK-Fd-aD7">
+            <objects>
+                <viewController id="9if-YA-T2u" customClass="HomeViewController" customModule="Shabbat_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lpr-S4-T05"/>
+                        <viewControllerLayoutGuide type="bottom" id="xE4-Wm-WlI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j5w-TX-AQu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPz-dS-sYa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="ave-TD-Q1X"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="dK9-b8-9tw" kind="embed" id="BkA-M0-aez"/>
+                                </connections>
+                            </containerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dqK-4m-v4k">
+                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecordTableViewCell" rowHeight="175" id="OT9-y6-iV6" customClass="RecordTableViewCell" customModule="Shabbat_Pro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OT9-y6-iV6" id="nW7-u6-mCD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פרשה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-tq-EKt">
+                                                    <rect key="frame" x="187" y="20" width="40" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תאריך עברי" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u13-tD-MkH">
+                                                    <rect key="frame" x="316" y="20" width="78" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תאריך לועזי" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syq-7V-AaS">
+                                                    <rect key="frame" x="20" y="20" width="79" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="qPo-Hg-wpn">
+                                                    <rect key="frame" x="20" y="61" width="374" height="32"/>
+                                                    <segments>
+                                                        <segment title="באר-שבע"/>
+                                                        <segment title="חיפה"/>
+                                                        <segment title="תל-אביב"/>
+                                                        <segment title="ירושלים"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="onPressCity:" destination="OT9-y6-iV6" eventType="valueChanged" id="PO6-a3-YZ3"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כניסה:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FF-Tw-83W">
+                                                    <rect key="frame" x="351" y="112" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שעה" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buf-Da-IwX">
+                                                    <rect key="frame" x="314" y="112" width="32" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="יציאה:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-io-zUc">
+                                                    <rect key="frame" x="352" y="134" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שעה" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-UR-t91">
+                                                    <rect key="frame" x="315" y="134" width="32" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MfV-UR-t91" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nW7-u6-mCD" secondAttribute="leading" constant="20" id="1E9-2V-Efz"/>
+                                                <constraint firstItem="mPE-io-zUc" firstAttribute="top" secondItem="4FF-Tw-83W" secondAttribute="bottom" constant="1" id="4YH-IK-bVr"/>
+                                                <constraint firstItem="qPo-Hg-wpn" firstAttribute="top" secondItem="tAQ-tq-EKt" secondAttribute="bottom" constant="20" id="9dg-Fb-t3p"/>
+                                                <constraint firstItem="qPo-Hg-wpn" firstAttribute="leading" secondItem="nW7-u6-mCD" secondAttribute="leading" constant="20" id="EPV-ag-kTR"/>
+                                                <constraint firstItem="u13-tD-MkH" firstAttribute="top" secondItem="nW7-u6-mCD" secondAttribute="top" constant="20" id="LA3-1Q-SkD"/>
+                                                <constraint firstItem="syq-7V-AaS" firstAttribute="leading" secondItem="nW7-u6-mCD" secondAttribute="leading" constant="20" id="M3h-xD-AAQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="u13-tD-MkH" secondAttribute="trailing" constant="20" id="OzN-LQ-tmt"/>
+                                                <constraint firstItem="4FF-Tw-83W" firstAttribute="leading" secondItem="Buf-Da-IwX" secondAttribute="trailing" constant="5" id="Oze-BU-1ca"/>
+                                                <constraint firstItem="mPE-io-zUc" firstAttribute="trailing" secondItem="4FF-Tw-83W" secondAttribute="trailing" id="RoO-Kc-dzc"/>
+                                                <constraint firstItem="Buf-Da-IwX" firstAttribute="centerY" secondItem="4FF-Tw-83W" secondAttribute="centerY" id="Rzf-PG-RA5"/>
+                                                <constraint firstAttribute="trailing" secondItem="4FF-Tw-83W" secondAttribute="trailing" constant="20" id="U7k-5g-Gsq"/>
+                                                <constraint firstAttribute="trailing" secondItem="qPo-Hg-wpn" secondAttribute="trailing" constant="20" id="WGG-cK-wFV"/>
+                                                <constraint firstItem="syq-7V-AaS" firstAttribute="top" secondItem="nW7-u6-mCD" secondAttribute="top" constant="20" id="WJU-OG-skU"/>
+                                                <constraint firstItem="MfV-UR-t91" firstAttribute="centerY" secondItem="mPE-io-zUc" secondAttribute="centerY" id="Yj6-ab-ecc"/>
+                                                <constraint firstItem="4FF-Tw-83W" firstAttribute="top" secondItem="qPo-Hg-wpn" secondAttribute="bottom" constant="20" id="fg3-0X-W6c"/>
+                                                <constraint firstItem="Buf-Da-IwX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nW7-u6-mCD" secondAttribute="leading" constant="20" id="hLz-kG-Pdr"/>
+                                                <constraint firstItem="tAQ-tq-EKt" firstAttribute="top" secondItem="nW7-u6-mCD" secondAttribute="top" constant="20" id="jWI-cs-0WK"/>
+                                                <constraint firstAttribute="bottom" secondItem="mPE-io-zUc" secondAttribute="bottom" constant="20" id="l7a-Ms-WM4"/>
+                                                <constraint firstItem="tAQ-tq-EKt" firstAttribute="centerX" secondItem="nW7-u6-mCD" secondAttribute="centerX" id="lUP-Zj-gR7"/>
+                                                <constraint firstItem="mPE-io-zUc" firstAttribute="leading" secondItem="MfV-UR-t91" secondAttribute="trailing" constant="5" id="mZv-S4-PFQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="citySegment" destination="qPo-Hg-wpn" id="s28-5Y-EHs"/>
+                                            <outlet property="dateLabel" destination="syq-7V-AaS" id="mX7-Pj-cby"/>
+                                            <outlet property="hebDateLabel" destination="u13-tD-MkH" id="ojl-dU-tLD"/>
+                                            <outlet property="parashaLabel" destination="tAQ-tq-EKt" id="tNK-72-fFH"/>
+                                            <outlet property="timeInLabel" destination="Buf-Da-IwX" id="TsA-cz-1ly"/>
+                                            <outlet property="timeOutLabel" destination="MfV-UR-t91" id="Chk-pC-71E"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9if-YA-T2u" id="68f-NI-ZFa"/>
+                                    <outlet property="delegate" destination="9if-YA-T2u" id="Fyl-VW-zS1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dqK-4m-v4k" firstAttribute="top" secondItem="EPz-dS-sYa" secondAttribute="bottom" id="1R9-KT-LIj"/>
+                            <constraint firstAttribute="trailing" secondItem="dqK-4m-v4k" secondAttribute="trailing" id="5kj-BC-bgw"/>
+                            <constraint firstAttribute="bottom" secondItem="dqK-4m-v4k" secondAttribute="bottom" id="KZU-k2-alc"/>
+                            <constraint firstItem="dqK-4m-v4k" firstAttribute="leading" secondItem="j5w-TX-AQu" secondAttribute="leading" id="Xt2-2w-yyi"/>
+                            <constraint firstAttribute="trailing" secondItem="EPz-dS-sYa" secondAttribute="trailing" id="g1U-5V-e72"/>
+                            <constraint firstItem="EPz-dS-sYa" firstAttribute="leading" secondItem="j5w-TX-AQu" secondAttribute="leading" id="gUH-I1-Vji"/>
+                            <constraint firstItem="EPz-dS-sYa" firstAttribute="top" secondItem="lpr-S4-T05" secondAttribute="bottom" id="o6F-Qp-NCZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="זמני כניסת שבת וחג" id="S7A-ah-pPD"/>
+                    <connections>
+                        <outlet property="noDataView" destination="MJi-1t-yOa" id="yoh-iN-AE0"/>
+                        <outlet property="storyContainerView" destination="EPz-dS-sYa" id="VpK-YX-dVI"/>
+                        <outlet property="tableView" destination="dqK-4m-v4k" id="lmj-mV-cou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yuz-eV-TBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="MJi-1t-yOa">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אין נתונים חדשים לחודש זה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uv-Ni-poB">
+                            <rect key="frame" x="29" y="53.5" width="182" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="7uv-Ni-poB" firstAttribute="centerY" secondItem="MJi-1t-yOa" secondAttribute="centerY" id="8EH-3u-aj8"/>
+                        <constraint firstItem="7uv-Ni-poB" firstAttribute="centerX" secondItem="MJi-1t-yOa" secondAttribute="centerX" id="nFp-5p-LbR"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="115.84821428571428"/>
+        </scene>
+        <!--Story Collection View Controller-->
+        <scene sceneID="LSM-Ku-NBr">
+            <objects>
+                <collectionViewController id="dK9-b8-9tw" customClass="StoryCollectionViewController" customModule="Shabbat_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="q4d-zC-fjN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b9v-ES-25b">
+                            <size key="itemSize" width="82" height="106"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCollectionViewCell" id="nBI-6B-hHV" customClass="StoryCollectionViewCell" customModule="Shabbat_Pro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="3.5" width="82" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hR8-cN-0ul">
+                                    <rect key="frame" x="0.0" y="0.0" width="82" height="99"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3p-sX-oaL">
+                                            <rect key="frame" x="0.0" y="0.0" width="82" height="99"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPP-CK-4Tw">
+                                                    <rect key="frame" x="4" y="0.0" width="75" height="75"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQU-wV-lsT">
+                                                    <rect key="frame" x="9" y="5" width="65" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="7Gt-Zj-W53"/>
+                                                        <constraint firstAttribute="height" constant="65" id="pvz-yf-9uE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H7-40-FrA">
+                                                    <rect key="frame" x="0.0" y="78" width="82" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="x06-9F-Tcv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="gPP-CK-4Tw" firstAttribute="leading" secondItem="lQU-wV-lsT" secondAttribute="leading" constant="-5" id="30p-1B-e3m"/>
+                                                <constraint firstItem="gPP-CK-4Tw" firstAttribute="top" secondItem="lQU-wV-lsT" secondAttribute="top" constant="-5" id="39F-IS-teM"/>
+                                                <constraint firstItem="6H7-40-FrA" firstAttribute="leading" secondItem="B3p-sX-oaL" secondAttribute="leading" id="8Cg-Mo-ynC"/>
+                                                <constraint firstAttribute="bottom" secondItem="6H7-40-FrA" secondAttribute="bottom" id="Dz9-Vl-5dS"/>
+                                                <constraint firstItem="lQU-wV-lsT" firstAttribute="top" secondItem="B3p-sX-oaL" secondAttribute="top" constant="5" id="EOT-wQ-bsl"/>
+                                                <constraint firstAttribute="trailing" secondItem="lQU-wV-lsT" secondAttribute="trailing" constant="8" id="F6O-0Q-sbx"/>
+                                                <constraint firstItem="6H7-40-FrA" firstAttribute="top" secondItem="lQU-wV-lsT" secondAttribute="bottom" constant="8" id="Iyb-CQ-VnG"/>
+                                                <constraint firstItem="gPP-CK-4Tw" firstAttribute="trailing" secondItem="lQU-wV-lsT" secondAttribute="trailing" constant="5" id="Xe9-JU-uLu"/>
+                                                <constraint firstAttribute="trailing" secondItem="6H7-40-FrA" secondAttribute="trailing" id="Z5T-1E-oi9"/>
+                                                <constraint firstItem="gPP-CK-4Tw" firstAttribute="bottom" secondItem="lQU-wV-lsT" secondAttribute="bottom" constant="5" id="esa-AP-JIN"/>
+                                                <constraint firstItem="lQU-wV-lsT" firstAttribute="leading" secondItem="B3p-sX-oaL" secondAttribute="leading" constant="9" id="u7J-JX-5H5"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="B3p-sX-oaL" secondAttribute="bottom" id="3h3-Yy-DtH"/>
+                                        <constraint firstAttribute="trailing" secondItem="B3p-sX-oaL" secondAttribute="trailing" id="E0v-IA-oF5"/>
+                                        <constraint firstItem="B3p-sX-oaL" firstAttribute="top" secondItem="hR8-cN-0ul" secondAttribute="top" id="Eo1-Es-v2P"/>
+                                        <constraint firstItem="B3p-sX-oaL" firstAttribute="leading" secondItem="hR8-cN-0ul" secondAttribute="leading" id="bJv-sJ-x47"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="currentMonthView" destination="gPP-CK-4Tw" id="94n-Lj-1eV"/>
+                                    <outlet property="imageView" destination="lQU-wV-lsT" id="x3i-Tc-8bC"/>
+                                    <outlet property="titleLabel" destination="6H7-40-FrA" id="tPG-6k-5KP"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dK9-b8-9tw" id="SQg-SD-7VH"/>
+                            <outlet property="delegate" destination="dK9-b8-9tw" id="NfI-PT-MkV"/>
+                        </connections>
+                    </collectionView>
+                    <size key="freeformSize" width="414" height="106"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DD-5E-90S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="-78"/>
+        </scene>
+    </scenes>
+</document>

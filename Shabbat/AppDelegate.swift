@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Shabbat Pro
+//  Shabbat
 //
-//  Created by Idan Moshe on 29/07/2020.
+//  Created by Idan Moshe on 01/08/2020.
 //  Copyright © 2020 Idan Moshe. All rights reserved.
 //
 
